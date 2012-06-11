@@ -1,0 +1,6 @@
+Download the following from the JBoss Customer Portal
+
+ * BRMS (brms-p-5.3.0.GA-standalone.zip)
+
+and copy to this directory for the init.sh script to work.
+
