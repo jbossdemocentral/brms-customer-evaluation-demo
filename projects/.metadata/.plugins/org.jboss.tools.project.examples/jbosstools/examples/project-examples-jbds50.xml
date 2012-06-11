@@ -1,0 +1,264 @@
+<projects>
+	<project>
+		<category>JBoss Quickstarts</category>
+		<name>helloworld</name>
+		<included-projects>jboss-as-helloworld</included-projects>
+		<shortDescription>Helloworld</shortDescription>
+		<description>
+This example demonstrates the use of CDI 1.0 and Servlet 3 in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
+The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.
+		</description>
+		<size>8192</size>
+		<url>http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/jbossas7-examples/helloworld.zip</url>
+		<fixes>
+			<fix type="wtpruntime">
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="description">works with JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.eclipse.m2e.core</property>
+				<property name="versions">[1.0.0,1.2.0)</property>
+				<property name="description">m2e &gt;= 1.0.</property>
+				<property name="connectorIds">org.eclipse.m2e.feature</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.maven.ide.eclipse.wtp</property>
+				<property name="versions">[0.13.1,0.16.0)</property>
+				<property name="description">m2eclipse-wtp &gt;= 0.13.1.</property>
+				<property name="connectorIds">org.maven.ide.eclipse.wtp</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.jboss.tools.maven.core</property>
+				<property name="versions">[1.3.0,1.4.0)</property>
+				<property name="description">JBoss Maven Tools.</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature, org.jboss.tools.maven.portlet.feature,org.jboss.tools.maven.seam.feature</property>
+			</fix>
+		</fixes>
+		<importType>maven</importType>
+		<importTypeDescription>The project example requires the m2eclipse, m2eclipse-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
+		<welcome type="cheatsheets" url="/jboss-as-helloworld/.cheatsheet.xml"/> 
+		<tags>central</tags>
+        <icon path="icons/jboss.png" />           
+	</project>
+	
+	<project>
+		<category>JBoss Quickstarts</category>
+		<name>helloworld-osgi</name>
+		<included-projects>jboss-as-helloworld-osgi</included-projects>
+		<shortDescription>Helloworld OSGi Example</shortDescription>
+		<description>
+This example demonstrates the use of OSGi in JBoss Application Server 7.1.
+The example can be deployed using Maven from the command line, by using the AS 7 web console or by dropping the OSGi bundle in the deployments folder.
+
+To deploy to JBoss Application Server 7.1 using JBoss Tools, start JBoss Application Server 7.1, right-click the project, select Run As>Maven build..., enter "package jboss-as:deploy" in the Goals field and click the Run button.
+This will build, deploy and start the OSGi bundle.
+You will see a Hello AS7 World!! message appear on the console when this is done.
+		</description>
+		<size>8192</size>
+		<url>http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/jbossas7-examples/helloworld-osgi.zip</url>
+		<fixes>
+			<fix type="wtpruntime">
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="description">works with JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.eclipse.m2e.core</property>
+				<property name="versions">[1.0.0,1.2.0)</property>
+				<property name="description">m2e &gt;= 1.0.</property>
+				<property name="connectorIds">org.eclipse.m2e.feature</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.maven.ide.eclipse.wtp</property>
+				<property name="versions">[0.13.1,0.16.0)</property>
+				<property name="description">m2eclipse-wtp &gt;= 0.13.1.</property>
+				<property name="connectorIds">org.maven.ide.eclipse.wtp</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.jboss.tools.maven.core</property>
+				<property name="versions">[1.3.0,1.4.0)</property>
+				<property name="description">JBoss Maven Tools.</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature, org.jboss.tools.maven.portlet.feature,org.jboss.tools.maven.seam.feature</property>
+			</fix>
+		</fixes>
+		<importType>maven</importType>
+		<importTypeDescription>The project example requires the m2eclipse, m2eclipse-wtp and JBoss Maven Project Examples feature.</importTypeDescription> 
+        <icon path="icons/jboss.png" />   
+    </project>
+	
+	
+	<project>
+		<category>JBoss Quickstarts</category>
+		<name>login</name>
+		<included-projects>jboss-as-login</included-projects>
+		<shortDescription>Login</shortDescription>
+		<description>
+This example demonstrates the use of CDI 1.0, JPA 2.0, JTA 1.1, EJB 3.1 and JSF 2.0 in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
+The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.		
+		</description>
+<size>8192</size>
+		<url>http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/jbossas7-examples/login.zip</url>
+		<fixes>
+			<fix type="wtpruntime">
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.70, org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="description">works with JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.eclipse.m2e.core</property>
+				<property name="versions">[1.0.0,1.2.0)</property>
+				<property name="description">m2e &gt;= 1.0.</property>
+				<property name="connectorIds">org.eclipse.m2e.feature</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.maven.ide.eclipse.wtp</property>
+				<property name="versions">[0.13.1,0.16.0)</property>
+				<property name="description">m2eclipse-wtp &gt;= 0.13.1.</property>
+				<property name="connectorIds">org.maven.ide.eclipse.wtp</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.jboss.tools.maven.core</property>
+				<property name="versions">[1.3.0,1.4.0)</property>
+				<property name="description">JBoss Maven Tools.</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature, org.jboss.tools.maven.portlet.feature,org.jboss.tools.maven.seam.feature</property>
+			</fix>
+		</fixes>
+		<importType>maven</importType>
+		<importTypeDescription>The project example requires the m2eclipse, m2eclipse-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
+		<welcome type="cheatsheets" url="/jboss-as-login/cheatsheets/login.xml"/> 
+        <tags>central</tags>
+        <icon path="icons/jboss.png" />           
+	</project>
+	
+	<project>
+		<category>JBoss Quickstarts</category>
+		<name>numberguess</name>
+		<included-projects>jboss-as-numberguess</included-projects>
+		<shortDescription>Numberguess</shortDescription>
+		<description>
+This example demonstrates the use of CDI 1.0 and JSF 2.0 in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
+The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.
+		</description>
+<size>8192</size>
+		<url>http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/jbossas7-examples/numberguess.zip</url>
+		<fixes>
+			<fix type="wtpruntime">
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="description">works with JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.eclipse.m2e.core</property>
+				<property name="versions">[1.0.0,1.2.0)</property>
+				<property name="description">m2e &gt;= 1.0.</property>
+				<property name="connectorIds">org.eclipse.m2e.feature</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.maven.ide.eclipse.wtp</property>
+				<property name="versions">[0.13.1,0.16.0)</property>
+				<property name="description">m2eclipse-wtp &gt;= 0.13.1.</property>
+				<property name="connectorIds">org.maven.ide.eclipse.wtp</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.jboss.tools.maven.core</property>
+				<property name="versions">[1.3.0,1.4.0)</property>
+				<property name="description">JBoss Maven Tools.</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature, org.jboss.tools.maven.portlet.feature,org.jboss.tools.maven.seam.feature</property>
+			</fix>
+		</fixes>
+		<importType>maven</importType>
+		<importTypeDescription>The project example requires the m2eclipse, m2eclipse-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
+		<welcome type="cheatsheets" url="/jboss-as-numberguess/.cheatsheet.xml"/>
+		<tags>central</tags>
+        <icon path="icons/jboss.png" />           
+	</project>
+	
+	<project>
+		<category>JBoss Quickstarts</category>
+		<name>kitchensink</name>
+		<included-projects>jboss-as-kitchensink</included-projects>
+		<shortDescription>Kitchensink</shortDescription>
+		<description>
+This is your project! It's a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 6 on JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
+This project is setup to allow you to create a compliant Java EE 6 application using JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0.
+It includes a persistence unit and some sample persistence and transaction code to help you get your feet wet with database access in enterprise Java.
+		</description>
+<size>8192</size>
+		<url>http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/jbossas7-examples/kitchensink.zip</url>
+		<fixes>
+			<fix type="wtpruntime">
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="description">works with JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.eclipse.m2e.core</property>
+				<property name="versions">[1.0.0,1.2.0)</property>
+				<property name="description">m2e &gt;= 1.0.</property>
+				<property name="connectorIds">org.eclipse.m2e.feature</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.maven.ide.eclipse.wtp</property>
+				<property name="versions">[0.13.1,0.16.0)</property>
+				<property name="description">m2eclipse-wtp &gt;= 0.13.1.</property>
+				<property name="connectorIds">org.maven.ide.eclipse.wtp</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.jboss.tools.maven.core</property>
+				<property name="versions">[1.3.0,1.4.0)</property>
+				<property name="description">JBoss Maven Tools.</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature, org.jboss.tools.maven.portlet.feature,org.jboss.tools.maven.seam.feature</property>
+			</fix>
+		</fixes>
+		<importType>maven</importType>
+		<importTypeDescription>The project example requires the m2eclipse, m2eclipse-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
+		<welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>
+		<tags>central</tags>
+        <icon path="icons/jboss.png" />           
+	</project>
+	<project>
+		<category>JBoss Quickstarts</category>
+		<name>helloworld-html5</name>
+		<included-projects>helloworld-html5</included-projects>
+		<shortDescription>HTML5</shortDescription>
+		<description>This example demonstrates the use of *CDI 1.0* and *JAX-RS* in *JBoss Application Server 7* using the Plain Old HTML5 (POH5) architecture.
+POH5 is basically a smart, HTML5+CSS3+JavaScript front-end using RESTful services on the backend.</description>
+        <size>7266</size>
+		<url>http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/jbossas7-examples/helloworld-html5.zip</url>
+		<fixes>
+			<fix type="wtpruntime">
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="description">works with JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.eclipse.m2e.core</property>
+				<property name="versions">[1.0.0,1.2.0)</property>
+				<property name="description">m2e &gt;= 1.0.</property>
+				<property name="connectorIds">org.eclipse.m2e.feature</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.maven.ide.eclipse.wtp</property>
+				<property name="versions">[0.13.1,0.16.0)</property>
+				<property name="description">m2eclipse-wtp &gt;= 0.13.1.</property>
+				<property name="connectorIds">org.maven.ide.eclipse.wtp</property>
+			</fix>
+			<fix type="plugin">
+				<property name="id">org.jboss.tools.maven.core</property>
+				<property name="versions">[1.3.0,1.4.0)</property>
+				<property name="description">JBoss Maven Tools.</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature, org.jboss.tools.maven.portlet.feature,org.jboss.tools.maven.seam.feature</property>
+			</fix>
+		</fixes>
+		<importType>maven</importType>
+		<importTypeDescription>The project example requires the m2eclipse, m2eclipse-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
+        <!-- no cheatsheet yet
+        <welcome type="cheatsheets" url="/helloworld-html5/cheatsheets/helloworld-html5.xml"/> 
+        -->
+        <welcome type="editor" url="/helloworld-html5/README.md"/>
+        <tags>central</tags>
+        <icon path="icons/jboss.png" />           
+	</project>
+</projects>
+

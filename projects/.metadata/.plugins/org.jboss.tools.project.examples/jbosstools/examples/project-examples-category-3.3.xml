@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categories>
+
+  <category name="JBoss Quickstarts"
+  	description="These quickstarts are aimed to get you up to writing applications with minimal fuss. We recommend that you work through the quickstarts in the order they are presented in this guide, however if you have previous experience with Java EE 6, you may wish to skip some or all of the quickstarts."
+  	priority="1" />
+  	
+  <category name="JBoss Application Server 7 Quickstarts"
+  	description="These quickstarts are aimed to get you up to writing applications with minimal fuss. We recommend that you work through the quickstarts in the order they are presented in this guide, however if you have previous experience with Java EE 6, you may wish to skip some or all of the quickstarts."
+  	priority="1" />
+  	
+  <category name="JBoss Maven Archetypes"
+    priority="2" />
+    
+</categories>
