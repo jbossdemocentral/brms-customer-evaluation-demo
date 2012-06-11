@@ -1,6 +1,0 @@
-eclipse.preferences.version=1
-org.jboss.ide.eclipse.as.ui.defaultWebServer=brms-standalone-5.3.0
-org.jboss.ide.eclipse.as.ui.preferences.disabled.automatic.server.view=true
-org.jboss.ide.eclipse.as.ui.preferences.enabledDecorators.1=true
-org.jboss.ide.eclipse.as.ui.preferences.runtime.last.type.org.jboss.ide.eclipse.as.runtime.eap.50=/Users/erics/demo-projects/github-customer-evaluation-demo/target/brms-standalone-5.3.0/jboss-as
-org.jboss.ide.eclipse.as.ui.wizards.LAST_SERVER_CREATED=brms-standalone-5.3.0

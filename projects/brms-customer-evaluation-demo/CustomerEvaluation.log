@@ -1,0 +1,398 @@
+<object-stream>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>1</factId>
+  <objectToString>org.jbpm.evaluation.customer.Person@7378aae2</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.RuleFlowVariableLogEvent>
+  <type>32</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <variableId>person</variableId>
+  <variableInstanceId>person</variableInstanceId>
+  <objectToString>org.jbpm.evaluation.customer.Person@7378aae2</objectToString>
+</org.drools.audit.event.RuleFlowVariableLogEvent>
+<org.drools.audit.event.RuleFlowVariableLogEvent>
+  <type>33</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <variableId>person</variableId>
+  <variableInstanceId>person</variableInstanceId>
+  <objectToString>org.jbpm.evaluation.customer.Person@7378aae2</objectToString>
+</org.drools.audit.event.RuleFlowVariableLogEvent>
+<org.drools.audit.event.RuleFlowVariableLogEvent>
+  <type>32</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <variableId>request</variableId>
+  <variableInstanceId>request</variableInstanceId>
+  <objectToString>org.jbpm.evaluation.customer.Request@31</objectToString>
+</org.drools.audit.event.RuleFlowVariableLogEvent>
+<org.drools.audit.event.RuleFlowVariableLogEvent>
+  <type>33</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <variableId>request</variableId>
+  <variableInstanceId>request</variableInstanceId>
+  <objectToString>org.jbpm.evaluation.customer.Request@31</objectToString>
+</org.drools.audit.event.RuleFlowVariableLogEvent>
+<org.drools.audit.event.RuleFlowLogEvent>
+  <type>8</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+</org.drools.audit.event.RuleFlowLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>24</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>1</nodeId>
+  <nodeName>Start</nodeName>
+  <nodeInstanceId>0</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>26</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>1</nodeId>
+  <nodeName>Start</nodeName>
+  <nodeInstanceId>0</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>24</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>17</nodeId>
+  <nodeName>Initialize</nodeName>
+  <nodeInstanceId>1</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>26</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>17</nodeId>
+  <nodeName>Initialize</nodeName>
+  <nodeInstanceId>1</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>24</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>13</nodeId>
+  <nodeName>Qualify Age</nodeName>
+  <nodeInstanceId>2</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>26</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>13</nodeId>
+  <nodeName>Qualify Age</nodeName>
+  <nodeInstanceId>2</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>24</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>15</nodeId>
+  <nodeName>Adult Customer</nodeName>
+  <nodeInstanceId>3</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowVariableLogEvent>
+  <type>32</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <variableId>validRequest</variableId>
+  <variableInstanceId>validRequest</variableInstanceId>
+  <objectToString>true</objectToString>
+</org.drools.audit.event.RuleFlowVariableLogEvent>
+<org.drools.audit.event.RuleFlowVariableLogEvent>
+  <type>33</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <variableId>validRequest</variableId>
+  <variableInstanceId>validRequest</variableInstanceId>
+  <objectToString>true</objectToString>
+</org.drools.audit.event.RuleFlowVariableLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>26</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>15</nodeId>
+  <nodeName>Adult Customer</nodeName>
+  <nodeInstanceId>3</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>24</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>22</nodeId>
+  <nodeName>Finance Rules</nodeName>
+  <nodeInstanceId>4</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowGroupLogEvent>
+  <type>12</type>
+  <groupName>Validation</groupName>
+  <size>0</size>
+</org.drools.audit.event.RuleFlowGroupLogEvent>
+<org.drools.audit.event.RuleFlowGroupLogEvent>
+  <type>13</type>
+  <groupName>Validation</groupName>
+  <size>0</size>
+</org.drools.audit.event.RuleFlowGroupLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>25</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>22</nodeId>
+  <nodeName>Finance Rules</nodeName>
+  <nodeInstanceId>4</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>27</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>15</nodeId>
+  <nodeName>Adult Customer</nodeName>
+  <nodeInstanceId>3</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>25</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>15</nodeId>
+  <nodeName>Adult Customer</nodeName>
+  <nodeInstanceId>3</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>27</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>13</nodeId>
+  <nodeName>Qualify Age</nodeName>
+  <nodeInstanceId>2</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>25</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>13</nodeId>
+  <nodeName>Qualify Age</nodeName>
+  <nodeInstanceId>2</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>27</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>17</nodeId>
+  <nodeName>Initialize</nodeName>
+  <nodeInstanceId>1</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>25</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>17</nodeId>
+  <nodeName>Initialize</nodeName>
+  <nodeInstanceId>1</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>27</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>1</nodeId>
+  <nodeName>Start</nodeName>
+  <nodeInstanceId>0</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>25</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>1</nodeId>
+  <nodeName>Start</nodeName>
+  <nodeInstanceId>0</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowLogEvent>
+  <type>9</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+</org.drools.audit.event.RuleFlowLogEvent>
+<org.drools.audit.event.RuleFlowGroupLogEvent>
+  <type>14</type>
+  <groupName>Validation</groupName>
+  <size>0</size>
+</org.drools.audit.event.RuleFlowGroupLogEvent>
+<org.drools.audit.event.RuleFlowGroupLogEvent>
+  <type>15</type>
+  <groupName>Validation</groupName>
+  <size>0</size>
+</org.drools.audit.event.RuleFlowGroupLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>26</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>22</nodeId>
+  <nodeName>Finance Rules</nodeName>
+  <nodeInstanceId>4</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>24</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>18</nodeId>
+  <nodeName>Decide Financial Status</nodeName>
+  <nodeInstanceId>5</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>26</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>18</nodeId>
+  <nodeName>Decide Financial Status</nodeName>
+  <nodeInstanceId>5</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>24</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>19</nodeId>
+  <nodeName>Rich Customer</nodeName>
+  <nodeInstanceId>6</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>26</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>19</nodeId>
+  <nodeName>Rich Customer</nodeName>
+  <nodeInstanceId>6</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>24</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>21</nodeId>
+  <nodeName>End Rich Customer</nodeName>
+  <nodeInstanceId>7</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>26</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>21</nodeId>
+  <nodeName>End Rich Customer</nodeName>
+  <nodeInstanceId>7</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowLogEvent>
+  <type>10</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+</org.drools.audit.event.RuleFlowLogEvent>
+<org.drools.audit.event.RuleFlowLogEvent>
+  <type>11</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+</org.drools.audit.event.RuleFlowLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>27</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>21</nodeId>
+  <nodeName>End Rich Customer</nodeName>
+  <nodeInstanceId>7</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>25</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>21</nodeId>
+  <nodeName>End Rich Customer</nodeName>
+  <nodeInstanceId>7</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>27</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>19</nodeId>
+  <nodeName>Rich Customer</nodeName>
+  <nodeInstanceId>6</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>25</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>19</nodeId>
+  <nodeName>Rich Customer</nodeName>
+  <nodeInstanceId>6</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>27</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>18</nodeId>
+  <nodeName>Decide Financial Status</nodeName>
+  <nodeInstanceId>5</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>25</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>18</nodeId>
+  <nodeName>Decide Financial Status</nodeName>
+  <nodeInstanceId>5</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.RuleFlowNodeLogEvent>
+  <type>27</type>
+  <processId>org.jbpm.customer-evaluation</processId>
+  <processName>Rule Node Demo</processName>
+  <processInstanceId>1</processInstanceId>
+  <nodeId>22</nodeId>
+  <nodeName>Finance Rules</nodeName>
+  <nodeInstanceId>4</nodeInstanceId>
+</org.drools.audit.event.RuleFlowNodeLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>2</factId>
+  <objectToString>WorkflowProcessInstance1 [processId=org.jbpm.customer-evaluation,state=2]</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+</object-stream>

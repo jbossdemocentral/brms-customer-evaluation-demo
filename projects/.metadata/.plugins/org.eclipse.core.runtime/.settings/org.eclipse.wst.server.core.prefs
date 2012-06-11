@@ -1,2 +1,0 @@
-eclipse.preferences.version=1
-runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<runtimes>\n  <runtime PROPERTY_EXEC_ENVIRONMENT\="JavaSE-1.6" id\="brms-standalone-5.3.0 Runtime" location\="/Users/erics/demo-projects/github-customer-evaluation-demo/target/brms-standalone-5.3.0/jboss-as" name\="brms-standalone-5.3.0 Runtime" org.jboss.ide.eclipse.as.core.runtime.configurationLocation\="server" org.jboss.ide.eclipse.as.core.runtime.configurationName\="default" runtime-type-id\="org.jboss.ide.eclipse.as.runtime.eap.50" timestamp\="1"/>\n</runtimes>\n
