@@ -30,7 +30,6 @@
 System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node");
 </script>
     </scriptTask>
-    <startEvent id="_1" name="Start" />
     <scriptTask id="_16" name="Underaged" scriptFormat="http://www.java.com/java" >
       <script>System.out.println("Entering " + kcontext.getNodeInstance().getNodeName() +" Node");
 
@@ -46,12 +45,15 @@ System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node
 System.out.println("Process ended in End Minor Node.");
 </script>
     </scriptTask>
+    <startEvent id="_1" name="Start" />
     <scriptTask id="_19" name="Rich Customer" scriptFormat="http://www.java.com/java" >
       <script>System.out.println("Entering " + kcontext.getNodeInstance().getNodeName() +" Node");
 
 // Setting request to valid.
 System.out.println("Detected and reporting valid request");
+System.out.println("Customer has amount: " + request.getAmount() + " in the bank.");
 kcontext.setVariable("validRequest", true);
+
 
 System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node");
 
@@ -67,7 +69,7 @@ System.out.println("Process ended in End Rich Customer Node.");
       <script>System.out.println("Entering " + kcontext.getNodeInstance().getNodeName() +" Node");
 
 // Setting request to invalid.
-System.out.println("Detected and reporting invalid request.");
+System.out.println("Customer has amount: " + request.getAmount() + " in the bank.");
 kcontext.setVariable("validRequest", false);
 
 System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node");
@@ -91,6 +93,7 @@ System.out.println("Process ended in End Poor Customer Node.");
 // Setting request to valid.
 System.out.println("Detected and reporting valid request");
 kcontext.setVariable("validRequest", true);
+request.setValid();
 
 System.out.println("Set validRequest to: " + kcontext.getVariable("validRequest"));
 
@@ -115,7 +118,6 @@ System.out.println("Gateway: " + kcontext.getNodeInstance().getNodeName());
 if (request.isValid()) {
 
     System.out.println("Determined request is valid, heading to Rich Customer Node");
-	System.out.println("Request validity reason is: " + request.getInvalidReason());
 	return true;
 }
 
@@ -131,7 +133,7 @@ return request.isValid();
 
 System.out.println("Gateway: " + kcontext.getNodeInstance().getNodeName());
 System.out.println("Detected  request is invalid, heading to Poor Customer Node");
-System.out.println("Request validity reason is: " + request.getInvalidReason());
+System.out.println("Request not valid reason is: " + request.getInvalidReason());
 return true; </conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="_15-_22" sourceRef="_15" targetRef="_22" />
@@ -150,11 +152,11 @@ return person.getAge() &gt; 17;</conditionExpression>
       <bpmndi:BPMNShape bpmnElement="_17" >
         <dc:Bounds x="96" y="56" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_1" >
-        <dc:Bounds x="16" y="56" width="48" height="48" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="_16" >
         <dc:Bounds x="289" y="16" width="117" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="16" y="56" width="48" height="48" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="_19" >
         <dc:Bounds x="631" y="55" width="106" height="48" />

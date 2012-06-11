@@ -5,9 +5,9 @@ public class Request {
 	private String id;
 	private String personId;
 	private Integer amount;
-	private boolean valid = true;
+	private boolean valid;
 	private String invalidReason;
-	private boolean canceled = false;
+	private boolean canceled;
 
 	public Request(String id) {
 		this.id = id;
@@ -40,6 +40,10 @@ public class Request {
 
 	public boolean isValid() {
 		return valid;
+	}
+	
+	public void setValid() {
+		this.valid = true;
 	}
 
 	public String getInvalidReason() {

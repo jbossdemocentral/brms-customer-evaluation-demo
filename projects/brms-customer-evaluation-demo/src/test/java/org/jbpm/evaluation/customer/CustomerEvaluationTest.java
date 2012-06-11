@@ -8,12 +8,12 @@ import org.drools.builder.KnowledgeBuilder;
 import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
 import org.drools.io.ResourceFactory;
-import org.drools.logger.KnowledgeRuntimeLogger;
-import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.process.WorkflowProcessInstance;
 import org.jbpm.test.JbpmJUnitTestCase;
 import org.junit.Test;
+import org.jbpm.evaluation.customer.Person;
+import org.jbpm.evaluation.customer.Request;
 
 /**
  * This is a sample file to launch a process.
@@ -23,7 +23,7 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 	private static Integer underAged    = 11;
 	private static Integer adultAged    = 25;
 	private static Integer richCustomer = 2000; // greater than 999.
-	private static Integer poorCutomer  = 500;
+	private static Integer poorCutomer  = 2;
 	
 	public CustomerEvaluationTest() {
 		super(true);
