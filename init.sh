@@ -78,6 +78,10 @@ else
 	cp support/hypersonic-localDB.script $SERVER_DIR/data/hypersonic/localDB.script
 fi
 
+echo "  - adding model jar to business central admin console classpath..." 
+echo
+cp support/customereval-model.jar $SERVER_DIR/deploy/jbpm-gwt-console-server.war/WEB-INF/lib
+
 echo "JBoss Enterprise BRMS 5.3 ${DEMO} Setup Complete."
 echo
 
