@@ -3,7 +3,7 @@ DEMO="Customer Evaluation Demo"
 JBOSS_HOME=./target/brms-standalone-5.3.0
 SERVER_DIR=$JBOSS_HOME/jboss-as/server/default
 SRC_DIR=./installs
-BRMS=brms-p-5.3.0.BRMS-ER8-standalone.zip
+BRMS=brms-p-5.3.0.GA-standalone.zip
 
 
 echo
