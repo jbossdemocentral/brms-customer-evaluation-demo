@@ -7,4 +7,6 @@ rule "Check Amount Customer" ruleflow-group "Validation"
     then
     	System.out.println("Under funded customer");
         r.setInvalid("Poor customer");
+        System.out.println("Set Request invalid comment to: Poor customer.");
+        System.out.println("Customer request= " + r);
 end

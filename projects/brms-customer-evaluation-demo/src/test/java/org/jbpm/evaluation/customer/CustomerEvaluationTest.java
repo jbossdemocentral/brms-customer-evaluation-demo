@@ -8,12 +8,12 @@ import org.drools.builder.KnowledgeBuilder;
 import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
 import org.drools.io.ResourceFactory;
+import org.drools.logger.KnowledgeRuntimeLogger;
+import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.process.WorkflowProcessInstance;
 import org.jbpm.test.JbpmJUnitTestCase;
 import org.junit.Test;
-import org.jbpm.evaluation.customer.Person;
-import org.jbpm.evaluation.customer.Request;
 
 /**
  * This is a sample file to launch a process.
@@ -29,42 +29,42 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 		super(true);
 	}
 
-	@Test
-	public void underagedCustomerEvaluationTest() {
-
-		// setup.
-		KnowledgeBase kbase = getNewKnowledgeBase();
-		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
-
-		// optional: setup logging.
-		//KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluation", 1000);
-	
-		// setup of a Person and Request.
-		Person underagedEval = getUnderagedCustomer();
-		Request richEval = getRichCustomer();
-		ksession.insert(underagedEval);
-
-		// Map to be passed to the startProcess.
-		Map<String, Object> params = new HashMap<String, Object>();
-		params.put("person", underagedEval);
-		params.put("request", richEval);
-		
-		// Fire it up!
-		System.out.println("=========================================");
-		System.out.println("= Starting Process Underaged Test Case. =");
-		System.out.println("=========================================");
-
-		WorkflowProcessInstance processInstance = (WorkflowProcessInstance) ksession.startProcess("org.jbpm.customer-evaluation", params);
-		ksession.insert(processInstance);
-		ksession.fireAllRules();
-				
-		// Finished, clean up the logger.
-		assertProcessInstanceCompleted(processInstance.getId(), ksession);
-		//logger.close();
-		
-		assertProcessInstanceCompleted(processInstance.getId(), ksession);
-		ksession.dispose();
-	}
+//	@Test
+//	public void underagedCustomerEvaluationTest() {
+//
+//		// setup.
+//		KnowledgeBase kbase = getNewKnowledgeBase();
+//		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
+//
+//		// optional: setup logging.
+//		KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationUnderaged", 1000);
+//	
+//		// setup of a Person and Request.
+//		Person underagedEval = getUnderagedCustomer();
+//		Request richEval = getRichCustomer();
+//		ksession.insert(underagedEval);
+//
+//		// Map to be passed to the startProcess.
+//		Map<String, Object> params = new HashMap<String, Object>();
+//		params.put("person", underagedEval);
+//		params.put("request", richEval);
+//		
+//		// Fire it up!
+//		System.out.println("=========================================");
+//		System.out.println("= Starting Process Underaged Test Case. =");
+//		System.out.println("=========================================");
+//
+//		WorkflowProcessInstance processInstance = (WorkflowProcessInstance) ksession.startProcess("org.jbpm.customer-evaluation", params);
+//		ksession.insert(processInstance);
+//		ksession.fireAllRules();
+//				
+//		// Finished, clean up the logger.
+//		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+//		logger.close();
+//		
+//		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+//		ksession.dispose();
+//	}
 
 	@Test
 	public void adultCustomerEvaluationTest() {
@@ -74,7 +74,7 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
 
 		// optional: setup logging.
-		//KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluation", 1000);
+		KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationPoorAdult", 1000);
 	
 		// setup of a Person and Request.
 		Person adultEval = getAdultCustomer();
@@ -97,47 +97,47 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 				
 		// Finished, clean up the logger.
 		assertProcessInstanceCompleted(processInstance.getId(), ksession);
-		//logger.close();
+		logger.close();
 		
 		assertProcessInstanceCompleted(processInstance.getId(), ksession);
 		ksession.dispose();
 	}
 
-	@Test
-	public void richCustomerEvaluationTest() {
-
-		// setup.
-		KnowledgeBase kbase = getNewKnowledgeBase();
-		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
-
-		// optional: setup logging.
-		//KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluation", 1000);
-	
-		// setup of a Person and Request.
-		Person adultEval = getAdultCustomer();
-		Request richEval = getRichCustomer();
-		ksession.insert(adultEval);
-
-		// Map to be passed to the startProcess.
-		Map<String, Object> params = new HashMap<String, Object>();
-		params.put("person", adultEval);
-		params.put("request", richEval);
-		
-		// Fire it up!
-		System.out.println("==========================================");
-		System.out.println("= Starting Process Rich Adult Test Case. =");
-		System.out.println("==========================================");
-		WorkflowProcessInstance processInstance = (WorkflowProcessInstance) ksession.startProcess("org.jbpm.customer-evaluation", params);
-		ksession.insert(processInstance);
-		ksession.fireAllRules();
-				
-		// Finished, clean up the logger.
-		assertProcessInstanceCompleted(processInstance.getId(), ksession);
-		//logger.close();
-		
-		assertProcessInstanceCompleted(processInstance.getId(), ksession);
-		ksession.dispose();
-	}
+//	@Test
+//	public void richCustomerEvaluationTest() {
+//
+//		// setup.
+//		KnowledgeBase kbase = getNewKnowledgeBase();
+//		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
+//
+//		// optional: setup logging.
+//		KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationRichAdult", 1000);
+//	
+//		// setup of a Person and Request.
+//		Person adultEval = getAdultCustomer();
+//		Request richEval = getRichCustomer();
+//		ksession.insert(adultEval);
+//
+//		// Map to be passed to the startProcess.
+//		Map<String, Object> params = new HashMap<String, Object>();
+//		params.put("person", adultEval);
+//		params.put("request", richEval);
+//		
+//		// Fire it up!
+//		System.out.println("==========================================");
+//		System.out.println("= Starting Process Rich Adult Test Case. =");
+//		System.out.println("==========================================");
+//		WorkflowProcessInstance processInstance = (WorkflowProcessInstance) ksession.startProcess("org.jbpm.customer-evaluation", params);
+//		ksession.insert(processInstance);
+//		ksession.fireAllRules();
+//				
+//		// Finished, clean up the logger.
+//		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+//		logger.close();
+//		
+//		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+//		ksession.dispose();
+//	}
 
 	private KnowledgeBase getNewKnowledgeBase() {
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
