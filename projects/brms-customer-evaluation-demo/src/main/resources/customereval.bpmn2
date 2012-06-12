@@ -30,7 +30,6 @@
 System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node");
 </script>
     </scriptTask>
-    <startEvent id="_1" name="Start" />
     <scriptTask id="_16" name="Underaged" scriptFormat="http://www.java.com/java" >
       <script>System.out.println("Entering " + kcontext.getNodeInstance().getNodeName() +" Node");
 
@@ -46,6 +45,7 @@ System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node
 System.out.println("Process ended in End Minor Node.");
 </script>
     </scriptTask>
+    <startEvent id="_1" name="Start" />
     <scriptTask id="_19" name="Rich Customer" scriptFormat="http://www.java.com/java" >
       <script>System.out.println("Entering " + kcontext.getNodeInstance().getNodeName() +" Node");
 
@@ -96,6 +96,10 @@ kcontext.setVariable("validRequest", true);
 request.setValid();
 
 System.out.println("Set validRequest to: " + kcontext.getVariable("validRequest"));
+
+// Insert Person and Request into our session for the rules to use.
+insert(person);
+insert(request);
 
 System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node");
 
@@ -152,11 +156,11 @@ return person.getAge() &gt; 17;</conditionExpression>
       <bpmndi:BPMNShape bpmnElement="_17" >
         <dc:Bounds x="96" y="56" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_1" >
-        <dc:Bounds x="16" y="56" width="48" height="48" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="_16" >
         <dc:Bounds x="289" y="16" width="117" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="16" y="56" width="48" height="48" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="_19" >
         <dc:Bounds x="631" y="55" width="106" height="48" />
