@@ -139,6 +139,43 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 		ksession.dispose();
 	}
 
+	
+	@Test
+	public void emptyRequestCustomerEvaluationTest() {
+
+		// setup.
+		KnowledgeBase kbase = getNewKnowledgeBase();
+		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
+
+		// optional: setup logging.
+		KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationEmptyRequest", 1000);
+	
+		// setup of a Person and Request.
+//		Person adultEval = getAdultCustomer();
+//		Request richEval = getRichCustomer();
+//		ksession.insert(adultEval);
+
+		// Map to be passed to the startProcess.
+		Map<String, Object> params = new HashMap<String, Object>();
+//		params.put("person", adultEval);
+//		params.put("request", richEval);
+		
+		// Fire it up!
+		System.out.println("=============================================");
+		System.out.println("= Starting Process Empty Request Test Case. =");
+		System.out.println("=============================================");
+		WorkflowProcessInstance processInstance = (WorkflowProcessInstance) ksession.startProcess("org.jbpm.customer-evaluation", params);
+		ksession.insert(processInstance);
+		ksession.fireAllRules();
+				
+		// Finished, clean up the logger.
+		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+		logger.close();
+		
+		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+		ksession.dispose();
+	}
+
 	private KnowledgeBase getNewKnowledgeBase() {
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
 		kbuilder.add(ResourceFactory.newClassPathResource("customereval.bpmn2"), ResourceType.BPMN2);

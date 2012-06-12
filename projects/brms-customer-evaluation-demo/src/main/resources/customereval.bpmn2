@@ -27,9 +27,24 @@
     <scriptTask id="_17" name="Initialize" scriptFormat="http://www.java.com/java" >
       <script>System.out.println("Entering " + kcontext.getNodeInstance().getNodeName() +" Node");
 
+if (request == null) {
+	System.out.println("There as no evaluation objects defined, adding default ones for demo purposes.");
+	
+	// define request object.
+	request = new Request("1");
+	request.setPersonId("erics");
+	request.setAmount(5000);
+	kcontext.setVariable("request", request);	
+	
+	// define person object.
+	person = new Person("erics", "Eric D. Schabell");
+	kcontext.setVariable("person", person);
+}
+
 System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node");
 </script>
     </scriptTask>
+    <startEvent id="_1" name="Start" />
     <scriptTask id="_16" name="Underaged" scriptFormat="http://www.java.com/java" >
       <script>System.out.println("Entering " + kcontext.getNodeInstance().getNodeName() +" Node");
 
@@ -45,7 +60,6 @@ System.out.println("Leaving " + kcontext.getNodeInstance().getNodeName() +" Node
 System.out.println("Process ended in End Minor Node.");
 </script>
     </scriptTask>
-    <startEvent id="_1" name="Start" />
     <scriptTask id="_19" name="Rich Customer" scriptFormat="http://www.java.com/java" >
       <script>System.out.println("Entering " + kcontext.getNodeInstance().getNodeName() +" Node");
 
@@ -156,11 +170,11 @@ return person.getAge() &gt; 17;</conditionExpression>
       <bpmndi:BPMNShape bpmnElement="_17" >
         <dc:Bounds x="96" y="56" width="80" height="48" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_16" >
-        <dc:Bounds x="289" y="16" width="117" height="48" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="_1" >
         <dc:Bounds x="16" y="56" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="289" y="16" width="117" height="48" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="_19" >
         <dc:Bounds x="631" y="55" width="106" height="48" />
