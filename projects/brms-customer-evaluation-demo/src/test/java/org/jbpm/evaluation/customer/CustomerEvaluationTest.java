@@ -150,15 +150,9 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 		// optional: setup logging.
 		KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationEmptyRequest", 1000);
 	
-		// setup of a Person and Request.
-//		Person adultEval = getAdultCustomer();
-//		Request richEval = getRichCustomer();
-//		ksession.insert(adultEval);
 
-		// Map to be passed to the startProcess.
+		// Map to be passed to the startProcess is intentionally empty.
 		Map<String, Object> params = new HashMap<String, Object>();
-//		params.put("person", adultEval);
-//		params.put("request", richEval);
 		
 		// Fire it up!
 		System.out.println("=============================================");
