@@ -80,14 +80,14 @@ fi
 
 echo "  - enabling work items by registering Email and Log nodes..."
 echo
-cp support/drools.session.conf $SERVER_DIR/deploy/jbpm-gwt-console-server.war/WEB-INF/classes/META-INF
-cp support/CustomWorkItemHandlers.conf $SERVER_DIR/deploy/jbpm-gwt-console-server.war/WEB-INF/classes/META-INF
-chmod 644 $SERVER_DIR/deploy/jbpm-gwt-console-server.war/WEB-INF/classes/META-INF/drools.session.conf
-chmod 644 $SERVER_DIR/deploy/jbpm-gwt-console-server.war/WEB-INF/classes/META-INF/CustomWorkItemHandlers.conf
+cp support/drools.session.conf $SERVER_DIR/deploy/business-central-server.war/WEB-INF/classes/META-INF
+cp support/CustomWorkItemHandlers.conf $SERVER_DIR/deploy/business-central-server.war/WEB-INF/classes/META-INF
+chmod 644 $SERVER_DIR/deploy/business-central-server.war/WEB-INF/classes/META-INF/drools.session.conf
+chmod 644 $SERVER_DIR/deploy/business-central-server.war/WEB-INF/classes/META-INF/CustomWorkItemHandlers.conf
 
 echo "  - adding model jar to business central admin console classpath..." 
 echo
-cp support/customereval-model.jar $SERVER_DIR/deploy/jbpm-gwt-console-server.war/WEB-INF/lib
+cp support/customereval-model.jar $SERVER_DIR/deploy/business-central-server.war/WEB-INF/lib
 
 echo "JBoss Enterprise BRMS 5.3 ${DEMO} Setup Complete."
 echo

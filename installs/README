@@ -4,7 +4,7 @@ Download the following from the JBoss Customer Portal
 
 and copy to this directory for the init.sh script to work.
 
-Note: for now we use ER8, so link to the above with before running init.sh:
+Note: for now we use ER9, so link to the above with before running init.sh:
 
-ln -s <path-to>/brms-p-5.3.0.BRMS-E8-standalone.zip ./brms-p-5.3.0.GA-standalone.zip
+ln -s <path-to>/brms-p-5.3.0.BRMS-ER9-standalone.zip ./brms-p-5.3.0.GA-standalone.zip
 
