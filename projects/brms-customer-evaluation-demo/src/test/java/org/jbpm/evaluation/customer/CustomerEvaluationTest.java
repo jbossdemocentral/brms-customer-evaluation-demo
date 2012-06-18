@@ -8,8 +8,6 @@ import org.drools.builder.KnowledgeBuilder;
 import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
 import org.drools.io.ResourceFactory;
-import org.drools.logger.KnowledgeRuntimeLogger;
-import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.process.WorkflowProcessInstance;
 import org.jbpm.test.JbpmJUnitTestCase;
@@ -24,20 +22,33 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 	private static Integer adultAged    = 25;
 	private static Integer richCustomer = 2000; // greater than 999.
 	private static Integer poorCutomer  = 2;
+	private static KnowledgeBase kbase; 
+	private static StatefulKnowledgeSession ksession;
 	
 	public CustomerEvaluationTest() {
 		super(true);
 	}
-
+	
+	private void setupTestCase() {
+		Map<String, ResourceType> kbtypes = new HashMap<String, ResourceType>();
+		kbtypes.put("financerules.drl", ResourceType.DRL);
+		kbtypes.put("customereval.bpmn2", ResourceType.BPMN2);
+		
+		kbase = null;
+		try {
+			kbase = createKnowledgeBase(kbtypes);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		ksession = createKnowledgeSession(kbase); 
+	}
 	@Test
 	public void underagedCustomerEvaluationTest() {
 
-		// setup.
-		KnowledgeBase kbase = getNewKnowledgeBase();
-		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
+		setupTestCase();
 
 		// optional: setup logging.
-		KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationUnderaged", 1000);
+		//KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationUnderaged", 1000);
 	
 		// setup of a Person and Request.
 		Person underagedEval = getUnderagedCustomer();
@@ -60,21 +71,18 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 				
 		// Finished, clean up the logger.
 		assertProcessInstanceCompleted(processInstance.getId(), ksession);
-		logger.close();
-		
-		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+		assertNodeTriggered(processInstance.getId(), "Underaged");
+		//logger.close();
 		ksession.dispose();
 	}
 
 	@Test
 	public void adultCustomerEvaluationTest() {
 
-		// setup.
-		KnowledgeBase kbase = getNewKnowledgeBase();
-		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
-
+		setupTestCase();
+		
 		// optional: setup logging.
-		KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationPoorAdult", 1000);
+		//KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationPoorAdult", 1000);
 	
 		// setup of a Person and Request.
 		Person adultEval = getAdultCustomer();
@@ -97,21 +105,18 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 				
 		// Finished, clean up the logger.
 		assertProcessInstanceCompleted(processInstance.getId(), ksession);
-		logger.close();
-		
-		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+		assertNodeTriggered(processInstance.getId(), "End Poor Customer");
+		//logger.close();
 		ksession.dispose();
 	}
 
 	@Test
 	public void richCustomerEvaluationTest() {
 
-		// setup.
-		KnowledgeBase kbase = getNewKnowledgeBase();
-		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
-
+		setupTestCase();
+		
 		// optional: setup logging.
-		KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationRichAdult", 1000);
+		//KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationRichAdult", 1000);
 	
 		// setup of a Person and Request.
 		Person adultEval = getAdultCustomer();
@@ -133,9 +138,8 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 				
 		// Finished, clean up the logger.
 		assertProcessInstanceCompleted(processInstance.getId(), ksession);
-		logger.close();
-		
-		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+		assertNodeTriggered(processInstance.getId(), "End Rich Customer");
+		//logger.close();
 		ksession.dispose();
 	}
 
@@ -143,12 +147,10 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 	@Test
 	public void emptyRequestCustomerEvaluationTest() {
 
-		// setup.
-		KnowledgeBase kbase = getNewKnowledgeBase();
-		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession(); 
-
+		setupTestCase();
+		
 		// optional: setup logging.
-		KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationEmptyRequest", 1000);
+		//KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newThreadedFileLogger(ksession, "CustomerEvaluationEmptyRequest", 1000);
 	
 
 		// Map to be passed to the startProcess is intentionally empty.
@@ -164,19 +166,12 @@ public class CustomerEvaluationTest extends JbpmJUnitTestCase {
 				
 		// Finished, clean up the logger.
 		assertProcessInstanceCompleted(processInstance.getId(), ksession);
-		logger.close();
-		
-		assertProcessInstanceCompleted(processInstance.getId(), ksession);
+		assertNodeTriggered(processInstance.getId(), "Underaged");
+		//logger.close();
 		ksession.dispose();
 	}
 
-	private KnowledgeBase getNewKnowledgeBase() {
-		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
-		kbuilder.add(ResourceFactory.newClassPathResource("customereval.bpmn2"), ResourceType.BPMN2);
-		kbuilder.add(ResourceFactory.newClassPathResource("financerules.drl"), ResourceType.DRL);		
-		KnowledgeBase kbase = kbuilder.newKnowledgeBase();
-		return kbase;
-	}
+
 	/**
 	 * Provide an under aged person.
 	 * 
