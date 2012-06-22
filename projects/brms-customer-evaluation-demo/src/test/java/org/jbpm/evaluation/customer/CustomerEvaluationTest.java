@@ -4,10 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.drools.KnowledgeBase;
-import org.drools.builder.KnowledgeBuilder;
-import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
-import org.drools.io.ResourceFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.process.WorkflowProcessInstance;
 import org.jbpm.test.JbpmJUnitTestCase;
