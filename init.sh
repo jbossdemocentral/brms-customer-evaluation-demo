@@ -79,11 +79,6 @@ rm jboss-jbpm-engine.zip
 rm -rf *.jar modeshape.zip *.RSA lib
 rm jboss-brms-engine.zip
 
-# Setup jboss-eap-6 maven repo locally.
-#echo "  - extracting jboss eap 6 maven repo locally into /tmp/${EAP_REPO}..."
-#echo
-#unzip -q -u -d /tmp $EAP_REPO.zip
-
 echo Rounding up, setting permissions and copying support files...
 echo
 cd ../
