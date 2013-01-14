@@ -102,7 +102,7 @@ touch $SERVER_DIR/business-central-server.war.dodeploy
 touch $SERVER_DIR/business-central.war.dodeploy
 touch $SERVER_DIR/designer.war.dodeploy
 touch $SERVER_DIR/jboss-brms.war.dodeploy
-# touch $SERVER_DIR/jbpm-human-task.war.dodeploy   ## uncomment to deploy if needed.
+touch $SERVER_DIR/jbpm-human-task.war.dodeploy
 
 echo "  - configuring security authentication, copying updated components.xml file to jboss-brms.war..."
 echo
@@ -131,6 +131,11 @@ chmod 644 $SERVER_DIR/business-central-server.war/WEB-INF/classes/META-INF/Custo
 echo "  - adding model jar to business central admin console classpath..." 
 echo
 cp support/customereval-model.jar $SERVER_DIR/business-central-server.war/WEB-INF/lib
+
+echo "  - adding netty dep to business-central-server.war and jbpm-human-task.war..."
+echo
+cp support/MANIFEST.MF $SERVER_DIR/business-central-server.war/WEB-INF/classes/META-INF/
+cp support/MANIFEST.MF $SERVER_DIR/jbpm-human-task.war/WEB-INF/classes/META-INF/
 
 echo "JBoss Enterprise BRMS ${VERSION} ${DEMO} Setup Complete."
 echo
