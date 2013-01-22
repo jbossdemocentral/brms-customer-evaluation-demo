@@ -113,6 +113,10 @@ echo "  - configuring deployment timeout extention and added security domain brm
 echo
 cp support/standalone.xml $SERVER_CONF
 
+echo "  - limiting verbose JackRabbit logging in jboss-log4j.xml file..."
+echo
+cp support/jboss-log4j.xml $SERVER_CONF
+
 # Add execute permissions to the standalone.sh script.
 echo "  - making sure standalone.sh for server is executable..."
 echo
