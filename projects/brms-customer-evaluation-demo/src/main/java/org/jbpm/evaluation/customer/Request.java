@@ -1,7 +1,13 @@
 package org.jbpm.evaluation.customer;
 
-public class Request {
+import java.io.Serializable;
+
+public class Request implements Serializable {
 	
+	/**
+	 * Default ID.
+	 */
+	private static final long serialVersionUID = 1L;
 	private String id;
 	private String personId;
 	private Integer amount;
