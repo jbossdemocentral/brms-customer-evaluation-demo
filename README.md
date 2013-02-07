@@ -21,3 +21,5 @@ See the tagged releases for the following versions of the product:
 - v1.0 is BRMS 5.3.0 standalone, running on JBoss EAP 5.
 
 - v1.2 is BRMS 5.3.1 deployable, running on JBoss EAP 6.
+
+- v1.3 is BRMS 5.3.1 deployable, running on JBoss EAP 6, cleaner logging, serialized object model fixes.
