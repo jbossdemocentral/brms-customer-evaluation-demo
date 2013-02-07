@@ -78,6 +78,15 @@
 						<logger category="org.jboss.as.server.deployment">
 							  <level name="ERROR"/>
 						</logger>
+						<logger category="org.jboss.as.ejb3.deployment">
+							  <level name="ERROR"/>
+						</logger>
+						<logger category="org.jboss.resteasy.spi.ResteasyDeployment">
+							  <level name="ERROR"/>
+						</logger>
+						<logger category="org.hornetq.core.server.impl.HornetQServerImpl">
+                <level name="ERROR"/>
+            </logger>
             <logger category="org.hibernate">
                 <level name="ERROR"/>
             </logger>
