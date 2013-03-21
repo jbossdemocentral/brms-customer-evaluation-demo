@@ -92,8 +92,12 @@ cd ../
 
 echo Updating to the newest web designer...
 echo
-rm -rf $SERVER_DIR/designer.war
-cp support/$DESIGNER $SERVER_DIR/designer.war
+rm -rf $SERVER_DIR/designer.war/*
+unzip -q support/$DESIGNER -d $SERVER_DIR/designer.war
+
+echo "  - set designer to jboss-brms in profile..."
+echo
+cp support/designer-jbpm.xml $SERVER_DIR/designer.war/profiles/jbpm.xml
 
 echo "  - enabling demo accounts logins in brms-users.properties file..."
 echo
