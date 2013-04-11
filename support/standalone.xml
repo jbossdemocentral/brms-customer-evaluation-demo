@@ -72,6 +72,12 @@
             <logger category="com.arjuna">
                 <level name="INFO"/>
             </logger>
+            <logger category="org.jbpm.integration.console.shared.GuvnorConnectionUtils">
+                <level name="ERROR"/>
+            </logger>
+            <logger category="org.jboss.bpm.console.server.plugin.PluginMgr">
+                <level name="ERROR"/>
+            </logger>
             <logger category="org.apache.tomcat.util.modeler">
                 <level name="WARN"/>
             </logger>
