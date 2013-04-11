@@ -26,3 +26,5 @@ See the tagged releases for the following versions of the product:
 
 - v1.4 is BRMS 5.3.1 deployable, running on JBoss EAP 6, added a declarative model example
 	(support/repository_export_declarative_model.zip)
+
+- v1.5 has patched designer that fixes removal of end-of-lines in code editor.
