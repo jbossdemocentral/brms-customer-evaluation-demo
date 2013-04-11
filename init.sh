@@ -7,7 +7,7 @@ LIB_DIR=./support/lib
 SRC_DIR=./installs
 EAP=jboss-eap-6.0.1.zip
 BRMS=brms-p-5.3.1.GA-deployable-ee6.zip
-DESIGNER=designer-2.5.0.war
+DESIGNER=designer-patched.war
 EAP_REPO=jboss-eap-6.0.1-maven-repository
 VERSION=5.3.1
 
