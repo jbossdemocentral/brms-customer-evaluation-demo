@@ -12,6 +12,7 @@ For those that can't wait, see README in 'installs' directory, add products,
 run 'init.sh', read output and then read Quick Start Guide that shows you 
 how to demo.
 
+Windows users see support/windows/README for installation.
 
 Released versions
 -----------------
@@ -28,3 +29,5 @@ See the tagged releases for the following versions of the product:
 	(support/repository_export_declarative_model.zip)
 
 - v1.5 has patched designer that fixes removal of end-of-lines in code editor.
+
+- v1.6 has Windows installation scripts.
