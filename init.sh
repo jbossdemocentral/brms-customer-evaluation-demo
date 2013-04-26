@@ -3,7 +3,6 @@ DEMO="Customer Evaluation Demo"
 JBOSS_HOME=./target/jboss-eap-6.1
 SERVER_DIR=$JBOSS_HOME/standalone/deployments/
 SERVER_CONF=$JBOSS_HOME/standalone/configuration/
-LIB_DIR=./support/lib
 SRC_DIR=./installs
 PRJ_DIR=./projects/brms-customer-evaluation-demo
 EAP=jboss-eap-6.1.0.Beta.zip
@@ -89,11 +88,6 @@ unzip -q jboss-jbpm-engine.zip
 echo "  - copying jBPM client JARs..."
 echo
 unzip -q -d ../$SERVER_DIR jboss-jbpm-engine.zip lib/netty.jar
-cp -r lib ../$LIB_DIR
-cp jbpm-test-5.3.1.BRMS.jar ../$LIB_DIR
-cp jbpm-human-task-5.3.1.BRMS.jar ../$LIB_DIR
-cp jbpm-persistence-jpa-5.3.1.BRMS.jar ../$LIB_DIR
-cp jbpm-workitems-5.3.1.BRMS.jar ../$LIB_DIR
 rm jboss-jbpm-engine.zip
 rm -rf *.jar modeshape.zip *.RSA lib
 rm jboss-brms-engine.zip
