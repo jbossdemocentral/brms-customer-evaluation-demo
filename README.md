@@ -34,3 +34,5 @@ See the tagged releases for the following versions of the product:
 
 - v1.7 demo project Mavenized.
 
+- v1.8 is BRMS 5.3.1 deployable, running on JBoss EAP 6.1.0.Beta.
+
