@@ -1,7 +1,7 @@
-JBoss BRMS (jBPM) Customer Evaluation Demo Quickstart Guide
-============================================================
+JBoss BPM Customer Evaluation Demo Quickstart Guide
+===================================================
 
-Demo based on JBoss BRMS products.
+Demo based on JBoss BPM products.
 
 Setup and Configuration
 -----------------------
