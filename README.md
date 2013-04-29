@@ -6,11 +6,33 @@ Demo based on JBoss BRMS products.
 Setup and Configuration
 -----------------------
 
-See Quick Start Guide in project as ODT and PDF for details on installation.
+See Quick Start Guide in project as ODT and PDF for details on installation. For those that can't wait:
 
-For those that can't wait, see README in 'installs' directory, add products, 
-run 'init.sh', read output and then read Quick Start Guide that shows you 
-how to demo.
+- see README in 'installs' directory
+
+- add products 
+
+- run 'init.sh' & read output
+
+- read Quick Start Guide
+
+- setup JBDS for project import, add JBoss EAP server
+
+- import projects
+
+- run 'mvn clean install' on project to build
+
+- start JBoss EAP server
+
+- login to BRM (http://localhost:8080/jboss-brms)
+
+- import repository-export from support dir
+
+- build and deploy project in BRM
+
+- login to Business Central (http://localhost:8080/business-central)
+
+- start process, view JBoss EAP logs for results
 
 Windows users see support/windows/README for installation.
 
