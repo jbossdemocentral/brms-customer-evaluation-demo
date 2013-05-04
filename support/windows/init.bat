@@ -1,16 +1,16 @@
 @ECHO OFF
 setlocal
 
-SET DEMO=Customer Evaluation Demo
-SET JBOSS_HOME=.\target\jboss-eap-6.0
+SET DEMO=Rewards Demo
+SET JBOSS_HOME=.\target\jboss-eap-6.1
 SET SERVER_DIR=%JBOSS_HOME%\standalone\deployments\
-SET SERVER_CONF=%JBOSS_HOME%/standalone/configuration\
+SET SERVER_CONF=%JBOSS_HOME%\standalone\configuration\
 SET LIB_DIR=.\support\lib\
 SET SRC_DIR=.\installs\
-SET EAP=jboss-eap-6.0.1.zip
+SET EAP=jboss-eap-6.1.0.Beta.zip
 SET BRMS=brms-p-5.3.1.GA-deployable-ee6.zip
-SET EAP_REPO=jboss-eap-6.0.1-maven-repository
 SET VERSION=5.3.1
+
 
 echo.
 echo Setting up the JBoss Enterprise EAP 6 %DEMO% environment...
@@ -63,8 +63,8 @@ if exist %JBOSS_HOME% (
  	echo.
  	cscript /nologo unzip.vbs %SRC_DIR%/%EAP% target
  )
- 
- REM Unzip the required files from JBoss BRMS Deployable
+
+REM Unzip the required files from JBoss BRMS Deployable
 echo Unpacking JBoss Enterprise BRMS %VERSION%...
 echo.
 cd installs
@@ -124,6 +124,7 @@ REM Create Empty DoDeploy Files
 <nul (set/p z=) >"%SERVER_DIR%\jboss-brms.war.dodeploy"
 <nul (set/p z=) >"%SERVER_DIR%\jbpm-human-task.war.dodeploy"
 
+
 echo - configuring security authentication, copying updated components.xml file to jboss-brms.war...
 echo.
 xcopy /Y /Q "support\components.xml" "%SERVER_DIR%\jboss-brms.war\WEB-INF\"
@@ -143,11 +144,6 @@ echo - enabling work items by registering Email and Log nodes...
 echo.
 xcopy /Y /Q "support\drools.session.conf" "%SERVER_DIR%\business-central-server.war\WEB-INF\classes\META-INF"
 xcopy /Y /Q "support\CustomWorkItemHandlers.conf" "%SERVER_DIR%\business-central-server.war\WEB-INF\classes\META-INF"
-
-echo.
-echo - adding model jar to business central admin console classpath...
-echo.
-xcopy /Y /Q "support\customereval-model.jar" "%SERVER_DIR%\business-central-server.war\WEB-INF\lib"
 
 echo. 
 echo - adding netty dep to business-central-server.war and jbpm-human-task.war...
