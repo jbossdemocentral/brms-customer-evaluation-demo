@@ -11,6 +11,9 @@ DESIGNER=designer-patched.war
 VERSION=5.3.1
 MAVENIZE_VERSION=5.3.1.BRMS
 
+# wipe screen.
+clear 
+
 ##
 # Installation mavanization functions.
 ##
