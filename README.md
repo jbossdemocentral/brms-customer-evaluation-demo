@@ -3,6 +3,31 @@ JBoss BPM Customer Evaluation Demo Quickstart Guide
 
 Demo based on JBoss BPM products.
 
+
+Supporting Articles
+-------------------
+
+[Customer Evaluation Demo Updated to EAP 6.1.0] (http://www.schabell.org/2013/05/jboss-brms-customer-eval-demo-eap-610.html)
+
+[Customer Evaluation Demo Updated to EAP 6.1.0.Beta] (http://www.schabell.org/2013/04/red-hat-jboss-brms-customer-evaluation.html)
+
+[Adding Declarative Model to Customer Evaluation Demo] (http://www.schabell.org/2013/03/jboss-brms-customer-eval-demo-declarative-model.html)
+
+[Customer Evaluation Demo Updated to EAP 6.0.0] (http://www.schabell.org/2013/01/jboss-brms-customer-evaluation-demo-update.html)
+
+[BPM made simple with Customer Evaluation Demo including video] (http://www.schabell.org/2012/06/jboss-enterprise-brms-bpm-made-simple.html)
+
+[How to setup SOA Tools in BRMS Example for JBoss Dev Studio 7] (http://www.schabell.org/2013/04/jboss-developer-studio-7-how-to-setup.html)
+
+[How to setup SOA Tools in BRMS Example for JBoss Dev Studio 6] (http://www.schabell.org/2013/04/jboss-developer-studio-6-how-to-setup.html)
+
+[How to setup SOA Tools in BRMS Example for JBoss Dev Studio 5] (http://www.schabell.org/2012/05/jboss-developer-studio-5-how-to-setup.html)
+
+[How to add Eclipse BPMN2 Modeller project to JBoss Dev Studio 5] (http://www.schabell.org/2013/01/jbds-bpmn2-modeler-howto-install.html)
+
+[Demo now available with Windows installation scripts] (http://www.schabell.org/2013/04/jboss-brms-demos-available-windows.html)
+
+
 Setup and Configuration
 -----------------------
 
@@ -35,6 +60,7 @@ See Quick Start Guide in project as ODT and PDF for details on installation. For
 - start process, view JBoss EAP logs for results
 
 Windows users see support/windows/README for installation.
+
 
 Released versions
 -----------------
