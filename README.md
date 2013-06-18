@@ -27,6 +27,7 @@ Supporting Articles
 
 [Demo now available with Windows installation scripts] (http://www.schabell.org/2013/04/jboss-brms-demos-available-windows.html)
 
+Brazilian language translation of demo documentation avaialbe in support/Quick Start Guide (pt-BR).{odt|pdf}
 
 Setup and Configuration
 -----------------------
