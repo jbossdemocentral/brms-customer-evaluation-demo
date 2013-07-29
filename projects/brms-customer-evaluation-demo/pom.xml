@@ -34,7 +34,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- WFK 2.3 Version -->
         <version.brms>5.3.1.BRMS</version.brms>
     </properties>
 
@@ -174,6 +173,7 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
         <resources>
             <resource>
                 <directory>${basedir}/src/main/resources</directory>
