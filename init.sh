@@ -74,11 +74,13 @@ if [ -x $JBOSS_HOME ]; then
 		# Unzip the JBoss EAP instance.
 		echo Unpacking JBoss Enterprise EAP 6...
 		echo
+		chmod +x $SRC_DIR/$EAP
 		unzip -q -d $SRC_DIR $SRC_DIR/$EAP
 else
 		# Unzip the JBoss EAP instance.
 		echo Unpacking new JBoss Enterprise EAP 6...
 		echo
+		chmod +x $SRC_DIR/$EAP
 		unzip -q -d $SRC_DIR $SRC_DIR/$EAP
 fi
 
@@ -86,6 +88,7 @@ fi
 echo Unpacking JBoss Enterprise BRMS $VERSION...
 echo
 cd installs
+chmod +x $BRMS
 unzip -q $BRMS
 
 echo "  - deploying JBoss Enterprise BRMS Manager WAR..."
