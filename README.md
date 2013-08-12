@@ -33,12 +33,12 @@ The following is a brief summary of the steps you will take to configure and run
     * Install the SOA tools.
     * Add the BRMS platform server runtime.
     * Import the project.
-4. Run 'mvn clean install' on the project to ensure it builds successfully.
+4. Run `mvn clean install` on the project to ensure it builds successfully.
 5. Start the JBoss EAP server.
-6. Login to BRM (http://localhost:8080/jboss-brms).
+6. Login to JBoss BRMS at <http://localhost:8080/jboss-brms>.
 7. Import the project repository `repository-export.zip` file from the `support/` directory.
 8. Build and deploy project in BRM.
-9. Login to Business Central (http://localhost:8080/business-central).
+9. Login to BRMS Central at <http://localhost:8080/business-central>.
 10. Start the process and view the JBoss EAP logs for results.
 
 _Note: Windows users should see `support/windows/README` for installation procedures._
