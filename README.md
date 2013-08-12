@@ -1,7 +1,7 @@
 brms-customer-evaluation-demo: BRMS Customer Evaluation Demo
 ============================================================
 Author: Eric D. Schabell
-Level: Beginner
+Level: Intermediate
 Technologies: BRMS, JBPM
 Summary: Demonstrates the use of BRMS for a Customer Evaluation
 Prerequisites: 
