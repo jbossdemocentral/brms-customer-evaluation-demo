@@ -41,6 +41,8 @@ Windows users see support/windows/README for installation.
 Supporting Articles
 -------------------
 
+[Customer Evaluation Demo Updated to EAP 6.1.1] (http://www.schabell.org/2013/09/jboss-brms-customer-eval-demo-updated-eap-611.html)
+
 [Customer Evaluation Demo Updated to EAP 6.1.0] (http://www.schabell.org/2013/05/jboss-brms-customer-eval-demo-eap-610.html)
 
 [Customer Evaluation Demo Updated to EAP 6.1.0.Beta] (http://www.schabell.org/2013/04/red-hat-jboss-brms-customer-evaluation.html)
