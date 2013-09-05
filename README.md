@@ -69,6 +69,8 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
+- v2.1 is BRMS 5.3.1 deployable, JBDS 7, running on JBoss EAP 6.1.1.
+
 - v2.0 is BRMS 5.3.1 deployable, JBDS 7.0.0.Beta1, running on JBoss EAP 6.1.0, includes pt-BR documentation translation.
 
 - v1.9 is BRMS 5.3.1 deployable, running on JBoss EAP 6.1.0.
