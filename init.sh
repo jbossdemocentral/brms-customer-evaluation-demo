@@ -11,7 +11,7 @@ SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects/brms-customer-evaluation-demo
 EAP=jboss-eap-6.1.0.zip
-BRMS=jboss-bpms-6.0.0-redhat-3-deployable.zip
+BPMS=jboss-bpms-6.0.0-redhat-3-eap6.zip
 VERSION=6.0.0.Beta
 #MAVENIZE_VERSION=5.3.1.BRMS
 
@@ -97,17 +97,7 @@ fi
 # Unzip the required files from JBoss product deployable.
 echo Unpacking $PRODUCT $VERSION...
 echo
-unzip -q $SRC_DIR/$BRMS
-
-echo "  - deploying $PRODUCT Manager; business-central and dashbuilder WARs..."
-echo
-unzip -q -d $SERVER_DIR jboss-bpms-manager.zip
-rm jboss-bpms-manager.zip 
-
-echo "  - deploying $PRODUCT Engine..."
-echo
-unzip -q -d $JBOSS_HOME/standalone/lib/ext jboss-bpms-engine.zip
-rm jboss-bpms-engine.zip
+unzip -q -o -d target $SRC_DIR/$BPMS
 
 echo "  - enabling demo accounts logins in application-users.properties file..."
 echo
@@ -116,11 +106,6 @@ cp $SUPPORT_DIR/application-users.properties $SERVER_CONF
 echo "  - enabling demo accounts role setup in application-roles.properties file..."
 echo
 cp $SUPPORT_DIR/application-roles.properties $SERVER_CONF
-
-echo "  - adding dodeploy files to deploy all brms components..."
-echo 
-touch $SERVER_DIR/business-central.war.dodeploy
-touch $SERVER_DIR/dashbuilder.war.dodeploy
 
 echo "  - configuring standalone.xml to setup demo repositories by default..."
 echo
@@ -134,6 +119,6 @@ chmod u+x $JBOSS_HOME/bin/standalone.sh
 echo "You can now start the $PRODUCT with $SERVER_BIN"
 echo
 
-echo "JBoss Enterprise BRMS ${VERSION} ${DEMO} Setup Complete."
+echo "$PRODUCT $VERSION $DEMO Setup Complete."
 echo
 
