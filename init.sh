@@ -2,10 +2,13 @@
 DEMO="Customer Evaluation Demo"
 AUTHORS="Eric D. Schabell"
 PROJECT="git@github.com:eschabell/brms-customer-evaluation-demo.git"
+PRODUCT="JBoss BPM Suite"
 JBOSS_HOME=./target/jboss-eap-6.1
 SERVER_DIR=$JBOSS_HOME/standalone/deployments/
 SERVER_CONF=$JBOSS_HOME/standalone/configuration/
+SERVER_BIN=$JBOSS_HOME/bin/standalone.sh
 SRC_DIR=./installs
+SUPPORT_DIR=./support
 PRJ_DIR=./projects/brms-customer-evaluation-demo
 EAP=jboss-eap-6.1.0.zip
 BRMS=jboss-bpms-6.0.0-redhat-3-deployable.zip
@@ -91,60 +94,45 @@ else
 		unzip -q -d target $SRC_DIR/$EAP
 fi
 
-exit
-
-# Unzip the required files from JBoss BRMS Deployable
-echo Unpacking JBoss Enterprise BRMS $VERSION...
+# Unzip the required files from JBoss product deployable.
+echo Unpacking $PRODUCT $VERSION...
 echo
-cd installs
-unzip -q $BRMS
+unzip -q $SRC_DIR/$BRMS
 
-echo "  - deploying JBoss Enterprise BRMS Manager WAR..."
+echo "  - deploying $PRODUCT Manager; business-central and dashbuilder WARs..."
 echo
-unzip -q -d ../$SERVER_DIR jboss-brms-manager-ee6.zip
-rm jboss-brms-manager-ee6.zip 
+unzip -q -d $SERVER_DIR jboss-bpms-manager.zip
+rm jboss-bpms-manager.zip 
 
-echo "  - deploying jBPM Console WARs..."
+echo "  - deploying $PRODUCT Engine..."
 echo
-unzip -q -d ../$SERVER_DIR jboss-jbpm-console-ee6.zip
-rm jboss-jbpm-console-ee6.zip
+unzip -q -d $JBOSS_HOME/standalone/lib/ext jboss-bpms-engine.zip
+rm jboss-bpms-engine.zip
 
-unzip -q jboss-jbpm-engine.zip 
-echo "  - copying jBPM client JARs..."
+echo "  - enabling demo accounts logins in application-users.properties file..."
 echo
-unzip -q -d ../$SERVER_DIR jboss-jbpm-engine.zip lib/netty.jar
-rm jboss-jbpm-engine.zip
-rm -rf *.jar modeshape.zip *.RSA lib
-rm jboss-brms-engine.zip
+cp $SUPPORT_DIR/application-users.properties $SERVER_CONF
 
-echo Rounding up, setting permissions and copying support files...
+echo "  - enabling demo accounts role setup in application-roles.properties file..."
 echo
-cd ../
-
-echo "  - enabling demo accounts logins in brms-users.properties file..."
-echo
-cp support/brms-users.properties $SERVER_CONF
-
-echo "  - enabling demo accounts role setup in brms-roles.properties file..."
-echo
-cp support/brms-roles.properties $SERVER_CONF
+cp $SUPPORT_DIR/application-roles.properties $SERVER_CONF
 
 echo "  - adding dodeploy files to deploy all brms components..."
 echo 
-touch $SERVER_DIR/business-central-server.war.dodeploy
 touch $SERVER_DIR/business-central.war.dodeploy
-touch $SERVER_DIR/designer.war.dodeploy
-touch $SERVER_DIR/jboss-brms.war.dodeploy
-touch $SERVER_DIR/jbpm-human-task.war.dodeploy
+touch $SERVER_DIR/dashbuilder.war.dodeploy
 
-echo "  - configuring deployment timeout extention and added security domain brms in standalone.xml..."
+echo "  - configuring standalone.xml to setup demo repositories by default..."
 echo
-cp support/standalone.xml $SERVER_CONF
+cp $SUPPORT_DIR/standalone.xml $SERVER_CONF
 
 # Add execute permissions to the standalone.sh script.
 echo "  - making sure standalone.sh for server is executable..."
 echo
 chmod u+x $JBOSS_HOME/bin/standalone.sh
+
+echo "You can now start the $PRODUCT with $SERVER_BIN"
+echo
 
 echo "JBoss Enterprise BRMS ${VERSION} ${DEMO} Setup Complete."
 echo
