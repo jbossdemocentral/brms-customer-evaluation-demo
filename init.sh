@@ -6,12 +6,12 @@ PRODUCT="JBoss BPM Suite"
 JBOSS_HOME=./target/jboss-eap-6.1
 SERVER_DIR=$JBOSS_HOME/standalone/deployments/
 SERVER_CONF=$JBOSS_HOME/standalone/configuration/
-SERVER_BIN=$JBOSS_HOME/bin/standalone.sh
+SERVER_BIN=$JBOSS_HOME/bin/
 SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects/brms-customer-evaluation-demo
 EAP=jboss-eap-6.1.0.zip
-BPMS=jboss-bpms-6.0.0-redhat-3-eap6.zip
+BPMS=jboss-bpms-6.0.0-redhat-3-deployable.zip
 VERSION=6.0.0.Beta
 #MAVENIZE_VERSION=5.3.1.BRMS
 
@@ -97,7 +97,22 @@ fi
 # Unzip the required files from JBoss product deployable.
 echo Unpacking $PRODUCT $VERSION...
 echo
-unzip -q -o -d target $SRC_DIR/$BPMS
+unzip -q $SRC_DIR/$BPMS
+
+echo Installing $PRODUCT Manager components, business-central and dashbuilder WARs...
+echo
+unzip -q -d $SERVER_DIR jboss-bpms-manager.zip
+rm jboss-bpms-manager.zip 
+
+#echo "  - deploying $PRODUCT Engine..."
+#echo
+#unzip -q -d $JBOSS_HOME/standalone/lib/ext jboss-bpms-engine.zip
+rm jboss-bpms-engine.zip
+
+echo "  - adding BPM Suite modules..."
+echo
+cp $SUPPORT_DIR/layers.conf  $JBOSS_HOME/modules
+unzip -q -d $JBOSS_HOME/modules/system/layers $SUPPORT_DIR/layers-bpms.zip
 
 echo "  - enabling demo accounts logins in application-users.properties file..."
 echo
@@ -107,16 +122,29 @@ echo "  - enabling demo accounts role setup in application-roles.properties file
 echo
 cp $SUPPORT_DIR/application-roles.properties $SERVER_CONF
 
-echo "  - configuring standalone.xml to setup demo repositories by default..."
+echo "  - configuring product.conf..."
+echo
+cp $SUPPORT_DIR/product.conf $SERVER_BIN
+
+echo "  - configuring standalone.xml files..."
 echo
 cp $SUPPORT_DIR/standalone.xml $SERVER_CONF
+cp $SUPPORT_DIR/standalone-osgi.xml $SERVER_CONF
+cp $SUPPORT_DIR/standalone-full.xml $SERVER_CONF
+cp $SUPPORT_DIR/standalone-full-ha.xml $SERVER_CONF
+cp $SUPPORT_DIR/standalone-ha.xml $SERVER_CONF
 
 # Add execute permissions to the standalone.sh script.
 echo "  - making sure standalone.sh for server is executable..."
 echo
 chmod u+x $JBOSS_HOME/bin/standalone.sh
 
-echo "You can now start the $PRODUCT with $SERVER_BIN"
+echo "  - adding dodeploy files..."
+echo
+touch ${SERVER_DIR}business-central.war.dodeploy
+touch ${SERVER_DIR}dashbuilder.war.dodeploy
+
+echo "You can now start the $PRODUCT with ${SERVER_BIN}standalone.sh"
 echo
 
 echo "$PRODUCT $VERSION $DEMO Setup Complete."
