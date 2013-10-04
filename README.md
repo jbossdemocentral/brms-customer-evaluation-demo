@@ -37,6 +37,7 @@ See Quick Start Guide in project as ODT and PDF for details on installation. For
 
 Windows users see support/windows/README for installation.
 
+Detailed documentation and presentations can be found in docs directory.
 
 Supporting Articles
 -------------------
@@ -70,6 +71,8 @@ Released versions
 -----------------
 
 See the tagged releases for the following versions of the product:
+
+- v2.2 restructured by adding in a docs directory.
 
 - v2.1 is BRMS 5.3.1 deployable, JBDS 7, running on JBoss EAP 6.1.1.
 
