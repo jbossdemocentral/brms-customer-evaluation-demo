@@ -3,7 +3,7 @@ JBoss BPM Customer Evaluation Demo Quickstart Guide
 
 ![Install Console](https://github.com/eschabell/brms-customer-evaluation-demo/blob/master/docs/demo-images/install-console.png?raw=true)
 
-![Loan Process](https://github.com/eschabell/brms-customer-evaluation-demo/blob/master/docs/demo-images/process.png?raw=true)
+![Process](https://github.com/eschabell/brms-customer-evaluation-demo/blob/master/docs/demo-images/process.png?raw=true)
 
 
 
